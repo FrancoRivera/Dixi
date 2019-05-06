@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/pet_list_dest"
+            android:icon="@drawable/ic_pets_black_24dp"
+            android:title="Mis Mascotas"/>
+
+    <item
+            android:id="@+id/profile_dest"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Mi Perfil"/>
+
+</menu>

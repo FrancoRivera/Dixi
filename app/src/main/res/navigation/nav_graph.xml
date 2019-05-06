@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/pet_list_dest">
+
+
+    <fragment android:id="@+id/pet_list_dest" android:name="pe.wemake.dixi.fragment.PetListFragment"
+              android:label="Mis perritos" tools:layout="@layout/fragment_pet_list">
+        <action android:id="@+id/get_pet_detail"
+                app:destination="@id/pet_dest">
+            <argument android:name="pet_id"
+                      android:defaultValue="10">
+            </argument>
+            <argument android:name="pet_name"
+                      android:defaultValue="Perrito">
+            </argument>
+        </action>
+        <action android:id="@+id/action_pet_list_dest_to_petAddFragment" app:destination="@id/petAddFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/pet_dest"
+              android:name="pe.wemake.dixi.fragment.PetFragment"
+              android:label="{pet_name}"
+              tools:layout="@layout/fragment_pet">
+
+        <argument android:name="pet_id"
+                  android:defaultValue="10">
+        </argument>
+        <argument android:name="pet_name"
+                  android:defaultValue="Perrito">
+
+        </argument>
+
+    </fragment>
+    <fragment android:id="@+id/profile_dest"
+              android:name="pe.wemake.dixi.fragment.ProfileFragment"
+              android:label="Mi Perfil"
+              tools:layout="@layout/fragment_profile"/>
+    <fragment android:id="@+id/petAddFragment" android:name="pe.wemake.dixi.fragment.PetAddFragment"
+              android:label="fragment_pet_add" tools:layout="@layout/fragment_pet_add"/>
+
+</navigation>
